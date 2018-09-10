@@ -1,0 +1,12 @@
+package test;
+
+public class Test {
+
+	public static void main(String[] args) {
+		System.out.println("hello formation Java");
+		System.out.println("sys out CTRL SPace");
+		System.out.println("CTRL F11 to run");
+
+	}
+
+}
