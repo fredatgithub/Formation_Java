@@ -1,10 +1,10 @@
 package primes;
 
-import java.awt.List;
+import java.util.ArrayList;
 
 public class Prime {
-	public static List GiveMePrimeBetween(int startingNumber, int endingNumber) {
-		List result = new List();
+	public static ArrayList<String> GiveMePrimeBetween(int startingNumber, int endingNumber) {
+		ArrayList<String> result = new ArrayList<String>();
 		for (int i = startingNumber; i <= endingNumber; i++) {
 			if (IsPrime(i)) {
 				result.add(Integer.toString(i));

@@ -1,13 +1,21 @@
 package primes;
 
+import java.util.ArrayList;
+
 public class startup {
 
 	public static void main(String[] args) {
 		// List nbPremiers = Prime.class.Giv
 
-		for (int i = 0; i < 200; i++) {
+		for (int i = 0; i < 2; i++) {
 			if (IsPrime(i)) {
 				System.out.print(i + " ");
+			}
+			
+			System.out.println("usage of Prime method");
+			ArrayList<String> premierNombrePremiers = (ArrayList<String>) Prime.GiveMePrimeBetween(3,  7);
+			for (String nombre : (ArrayList<String>) premierNombrePremiers) {
+				System.out.println(nombre);
 			}
 		}
 	}
