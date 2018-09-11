@@ -3,7 +3,7 @@ package primes;
 import java.awt.List;
 
 public class Prime {
-	public List GiveMePrimeBetween(int startingNumber, int endingNumber) {
+	public static List GiveMePrimeBetween(int startingNumber, int endingNumber) {
 		List result = new List();
 		for (int i = startingNumber; i <= endingNumber; i++) {
 			if (IsPrime(i)) {
@@ -14,7 +14,7 @@ public class Prime {
 		return result;
 	}
 
-	public boolean IsPrime(int number) {
+	public static boolean IsPrime(int number) {
 		// process false numbers first
 		if (number < 2)
 			return false;
