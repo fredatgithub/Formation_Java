@@ -1,6 +1,6 @@
 package domaine;
 
-public class Manager {
+public class Manager extends Employe{
 	private int id;
 	private String nom ;
 	private String prenom ;
@@ -10,11 +10,28 @@ public class Manager {
 		this.nom = nom;
 		this.prenom = prenom;
 	}
-
-	public void poserConge(String dateDebut, String dateFin){
-		System.out.println("Monsieur " + prenom + " " + nom + " pose un conge du " + dateDebut + " au " + dateFin);
+	
+	public Manager(String pPrenom , String pNom, int pId){
+		super(pPrenom, pNom, pId);
 	}
 	
+	public Manager(String pNom, String pPrenom){
+		super(pPrenom, pNom, 0);
+	}
+	
+	public Manager(String pNom){
+		this("Richard", pNom, 0);
+	}
+	
+	public Manager(){
+		this("Richard", "Durand", 0);
+	}
+	
+	public void poserConge(String dateDebut, String dateFin){
+		super.poserConge(dateDebut, dateFin);
+		System.out.println("Etant manager, il valide ses propres congés");
+	}
+		
 	public void validerConge(){
 		
 	}

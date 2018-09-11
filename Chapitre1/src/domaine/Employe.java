@@ -4,13 +4,17 @@ public class Employe {
 	private int id;
 	private String nom ;
 	private String prenom ;
-	private Integer age = new Integer(10);
+	//private Integer age = new Integer(10);
 	
-	public Employe(int id, String nom, String prenom){
+	public Employe(String prenom, String nom, int id){
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.age = 18;
+		//this.age = 18;
+	}
+	
+	public Employe(){
+		
 	}
 
 	public void poserConge(String dateDebut, String dateFin){
