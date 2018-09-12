@@ -5,7 +5,9 @@ public class LanceurGestionConges {
 	public static void main(String[] args) {
 		Employe fred = new Employe("fred", "the geek", 1);
 		Manager Reda = new Manager("Reda", "The boss", 1);
+		
 		ServicePaie servicePaie = new ServicePaie();
+		
 		servicePaie.listerCongePersonnel(fred);
 		servicePaie.listerCongePersonnel(Reda);
 		

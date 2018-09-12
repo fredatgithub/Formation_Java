@@ -16,4 +16,14 @@ public class Point {
 	public void modifier(Point p){
 		modifier(p.x, p.y);
 	}
+
+	public Point(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Point() {
+		super();
+	}
 }

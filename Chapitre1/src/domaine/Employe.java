@@ -53,7 +53,7 @@ public class Employe implements IPersonnel {
 	}
 
 	@Override
-	public void consulterConges() {
+	public void consulterConges() { // will return Collection
 		System.out.println("Consultation des congés de " + prenom + " " + nom);
 		//return null;
 	}
