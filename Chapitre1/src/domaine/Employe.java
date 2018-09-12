@@ -1,6 +1,8 @@
 package domaine;
 
-public class Employe {
+import java.util.Collection;
+
+public class Employe implements IPersonnel {
 	private int id;
 	private String nom ;
 	private String prenom ;
@@ -48,6 +50,12 @@ public class Employe {
 	
 	public void setPrenom(String prenom){
 		this.prenom = prenom;
+	}
+
+	@Override
+	public Collection consulterConges() {
+		System.out.println("Consultation des congés de " + prenom + " " + nom);
+		return null;
 	}
 	
 	
