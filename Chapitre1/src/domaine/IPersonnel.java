@@ -1,8 +1,8 @@
 package domaine;
 
-import java.util.Collection;
+//import java.util.Collection;
 
 public interface IPersonnel {
-	public Collection consulterConges();
+	public void consulterConges(); // will return a Collection
 
 }
