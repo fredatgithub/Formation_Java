@@ -1,6 +1,6 @@
 package domaine;
 
-import java.util.Collection;
+//import java.util.Collection;
 
 public class Employe implements IPersonnel {
 	private int id;

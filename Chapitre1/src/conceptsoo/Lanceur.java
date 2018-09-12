@@ -11,18 +11,10 @@ public class Lanceur {
 		list.add(p1);
 		list.add(new Point(20, 40));
 		list.add(new Point(60,50));
-		if (list.contains(p1)) {
-			System.out.println("ok");
-		}
-		else {
-			System.out.println("non ok");
-		}
+		if (list.contains(p1)) System.out.println("ok");
+		else System.out.println("non ok");
 		
-		if (list.contains(new Point(20, 40))) {
-			System.out.println("ok");
-			
-		} else {
-			System.out.println("non ok");
-		}
+		if (list.contains(new Point(20, 40))) System.out.println("ok");
+		else System.out.println("non ok");
 	}
 }
