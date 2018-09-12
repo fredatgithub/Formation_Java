@@ -1,4 +1,4 @@
-package domaine;
+package domaine.copy;
 
 import java.util.HashSet;
 
@@ -9,7 +9,7 @@ public class Employe implements IPersonnel {
 	private String nom ;
 	private String prenom ;
 	//private Integer age = new Integer(10);
-	private HashSet<DemandeConges> demandeConges;
+	private HashSet demandeConges;
 	
 	public Employe(String prenom, String nom, int id){
 		this.id = id;
