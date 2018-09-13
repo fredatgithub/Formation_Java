@@ -1,7 +1,7 @@
 package serialization;
 
 public class util {
-	public static String Plural(int nombre){
+	public static String Pluralize(int nombre){
 		return nombre > 1 ? "s" : "";
 	}
 }

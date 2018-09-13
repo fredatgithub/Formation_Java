@@ -8,6 +8,9 @@ public class Demo {
 		voiture.setCarburant(98);
 		voiture.setNbrKlm(3000);
 		Moteur.setNbInstance(1);
+		Voiture peugeot = new Voiture("Peugeot");
+		Moteur.setNbInstance(2);
+		
 		FileOutputStream ficSortie = null;
 		FileInputStream ficEntree = null;
 		try {
@@ -25,15 +28,13 @@ public class Demo {
 			System.out.println(
 					"marque voiture=" + voiture.getMoteur().getMarque() + ", carburant=" + voiture.getCarburant());
 			voiture.getMoteur();
-			System.out.println("La voiture " + voiture.getMoteur().getMarque() + " a " + Moteur.getNbInstance() +" instance ");
+			System.out.println("La voiture " + voiture.getMoteur().getMarque() + " a " + Moteur.getNbInstance() +" instance" + util.Pluralize(Moteur.getNbInstance()));
+			System.out.println("La voiture " + peugeot.getMoteur().getMarque() + " a " + Moteur.getNbInstance() +" instance" + util.Pluralize(Moteur.getNbInstance()));
 		} catch (FileNotFoundException e) {
-
 			e.printStackTrace();
 		} catch (IOException e) {
-
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
-
 			e.printStackTrace();
 		} finally {
 			try {

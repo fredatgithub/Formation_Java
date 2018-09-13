@@ -1,0 +1,7 @@
+mysql -u root -p
+entrez le mot de passe
+use contactSimple
+
+show tables;
+
+select * from contacts;
