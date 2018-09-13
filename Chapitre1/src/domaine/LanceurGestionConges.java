@@ -9,13 +9,18 @@ public class LanceurGestionConges {
 		ServicePaie servicePaie = new ServicePaie();
 		
 		servicePaie.listerCongePersonnel(fred);
-		servicePaie.listerCongePersonnel(Reda);
 		
 		fred.poserConge("11/09/2018", "12/09/2018");
-		Reda.poserConge("17/09/2018", "21/09/2018");
+		fred.poserConge("11/09/2019", "12/09/2019");
+		fred.poserConge("11/09/2020", "12/09/2020");
+		fred.poserConge("11/09/2021", "12/09/2021");
+		servicePaie.listerCongePersonnel(Reda);
+		Reda.poserConge("17/09/2022", "21/09/2022");
+//		Reda.poserConge("17/09/2022", "21/09/2022");
+//		Reda.poserConge("17/09/2022", "21/09/2022");
+//		Reda.poserConge("17/09/2022", "21/09/2022");
+		
 		Reda.validerConge();
 		System.out.println("Reda a validé les de congés de Fred et il peut partir en pause");
-
 	}
-
 }

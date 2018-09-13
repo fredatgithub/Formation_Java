@@ -50,5 +50,4 @@ public class DemandeConges {
 	public void setEtatValidation(String etatValidation){
 		this.etatValidation = etatValidation;
 	}
-
 }

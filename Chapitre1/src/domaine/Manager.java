@@ -28,12 +28,18 @@ public class Manager extends Employe{
 	}
 	
 	public void poserConge(String dateDebut, String dateFin){
+		
 		super.poserConge(dateDebut, dateFin);
 		System.out.println("Etant manager, il valide ses propres congés");
 	}
 		
 	public void validerConge(){
-		
+		if (super.numberOfVacations > super.numberOfVacationsMax) {
+			System.out.println("Congé refusé car trop en vacances, il faut bosser un peu");
+		}
+		else {
+			super.numberOfVacations++;
+		}
 	}
 	
 	@Override
@@ -64,5 +70,4 @@ public class Manager extends Employe{
 	public void setPrenom(String prenom){
 		this.prenom = prenom;
 	}
-
 }

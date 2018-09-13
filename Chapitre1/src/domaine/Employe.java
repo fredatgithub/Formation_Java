@@ -11,8 +11,9 @@ public class Employe implements IPersonnel {
 	private String prenom ;
 	//private Integer age = new Integer(10);
 	private HashSet<DemandeConges> demandeConges = new HashSet<DemandeConges>();
-	private Manager manager=null;
-	
+	private Manager manager = null;
+	public int numberOfVacations = 0;
+	public final int numberOfVacationsMax = 3;
 	
 	public Employe(String prenom, String nom, int id){
 		this.id = id;
@@ -20,10 +21,11 @@ public class Employe implements IPersonnel {
 		this.prenom = prenom;
 		//this.age = 18;
 		//demandeConges = new HashSet<>();
+		numberOfVacations = 0;
 	}
 	
 	public Employe(){
-		
+		numberOfVacations = 0;
 	}
 	
 	//getter pour avoir le manager de l'employe
@@ -44,13 +46,19 @@ public class Employe implements IPersonnel {
 	public void setDemConges(HashSet<DemandeConges> uneDemandeDeConges) {
 		this.demandeConges = uneDemandeDeConges;
 	}
-	//ajouter une demande a la liste
+	//ajouter une demande à la liste
 	public void ajouterDemConge(DemandeConges uneDemande){
 		this.demandeConges.add(uneDemande);
 	}
 
 	public void poserConge(String dateDebut, String dateFin){
-		System.out.println("Monsieur " + prenom + " " + nom + " pose un conge du " + dateDebut + " au " + dateFin);
+		if (this.numberOfVacations > this.numberOfVacationsMax) {
+			System.out.println("Monsieur " + prenom + " " + nom + " a essayé de poser un conge du " + dateDebut + " au " + dateFin 
+					+ " mais cela est refusé car vous n'avez le droit qu'à " + this.numberOfVacationsMax + " jours maximum");
+		} else {
+			System.out.println("Monsieur " + prenom + " " + nom + " pose un conge du " + dateDebut + " au " + dateFin);
+			this.numberOfVacations++;
+		}
 	}
 	
 	public int getId(){
@@ -87,6 +95,4 @@ public class Employe implements IPersonnel {
 		System.out.println("Consultation des congés de " + prenom + " " + nom);
 		//return null;
 	}
-	
-	
 }

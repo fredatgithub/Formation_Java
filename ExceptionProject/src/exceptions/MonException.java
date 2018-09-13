@@ -8,15 +8,15 @@ public class MonException extends Exception{
 	private String message="valeur incorrecte: ";
 	
 	public MonException(int x) {
-		this.x=x;
+		this.x = x;
 	}
 	@Override
 	public String toString(){;
-		return "valeur incorrecte: "+x; 
+		return "valeur incorrecte: " + x; 
 	}
 	@Override
 	public String getMessage() {
 		// TODO Auto-generated method stub
-		return message+x;
+		return message + x;
 	}
 }
