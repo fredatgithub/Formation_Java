@@ -64,9 +64,6 @@ public class DButil {
 				e.printStackTrace();
 			}
 		}
-		
-	
-
 	}
 
 	public void getListContacts() {
@@ -116,15 +113,13 @@ public class DButil {
 
 		} catch (SQLException e) {
 			/*
-			 * Traitement des erreurs SQL (connection à la base, exécution de la
-			 * requête...)
+			 * Traitement des erreurs SQL (connection à la base, exécution de la requête ...)
 			 */
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			/*
 			 * Traitement des erreurs liées au Class.forName(), par exemple si
-			 * la classe passée en paramètre n'existe pas ou n'est pas dans le
-			 * classpath
+			 * la classe passée en paramètre n'existe pas ou n'est pas dans le classpath
 			 */
 			e.printStackTrace();
 		} finally {
@@ -133,9 +128,8 @@ public class DButil {
 			 */
 			try {
 				/*
-				 * Si il y a eu erreur/exception, il faut quand même libérer les
-				 * ressources mais elle peuvent déjà l'être (être null) d'où le
-				 * test
+				 * S'il y a eu une erreur/exception, il faut quand même libérer les
+				 * ressources mais elles peuvent déjà l'être (être null) d'où le test
 				 */
 				if (st != null) {
 					st.close();
@@ -150,7 +144,5 @@ public class DButil {
 				e.printStackTrace();
 			}
 		}
-
 	}
-
 }

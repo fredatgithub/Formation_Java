@@ -9,8 +9,6 @@ public class Contact {
     private String prenom;
     
     private String email;
-
-  
       
     public Contact(int id, String nom, String prenom, String email) {
 		super();
@@ -27,41 +25,33 @@ public class Contact {
 		this.email = "Blanc.Xav@mail.com";
     }
 
-
 	public final int getId() {
         return id;
     }
-
     
     public final void setId(final int pId) {
         this.id = pId;
     }
-
    
     public final String getNom() {
         return nom;
     }
-
    
     public final void setNom(final String pNom) {
         this.nom = pNom;
     }
-
  
     public final String getPrenom() {
         return prenom;
     }
-
    
     public void setPrenom(final String pPrenom) {
         this.prenom = pPrenom;
     }
 
-
 	public String getEmail() {
 		return email;
 	}
-
 
 	public void setEmail(String email) {
 		this.email = email;
@@ -71,7 +61,4 @@ public class Contact {
 	public String toString() {
 		return "Contact [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + "]";
 	}
-  
-	
-    
 }

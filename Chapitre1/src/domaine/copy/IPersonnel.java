@@ -1,8 +1,9 @@
 package domaine.copy;
 
+import java.util.HashSet;
+
 //import java.util.Collection;
 
 public interface IPersonnel {
-	public void consulterConges(); // will return a Collection
-
+	public HashSet<String> consulterConges(); // will return a Collection
 }

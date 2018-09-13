@@ -1,7 +1,6 @@
 package domaine.copy;
 
 import java.util.HashSet;
-
 //import java.util.Collection;
 
 public class Employe implements IPersonnel {
@@ -9,14 +8,14 @@ public class Employe implements IPersonnel {
 	private String nom ;
 	private String prenom ;
 	//private Integer age = new Integer(10);
-	private HashSet demandeConges;
+	private HashSet<String> demandeConges;
 	
 	public Employe(String prenom, String nom, int id){
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		//this.age = 18;
-		demandeConges = new HashSet<>();
+		demandeConges = new HashSet<String>();
 	}
 	
 	public Employe(){
@@ -25,6 +24,7 @@ public class Employe implements IPersonnel {
 
 	public void poserConge(String dateDebut, String dateFin){
 		System.out.println("Monsieur " + prenom + " " + nom + " pose un conge du " + dateDebut + " au " + dateFin);
+		demandeConges.add("Demande de congé du " + dateDebut + " au " + dateFin);
 	}
 	
 	public int getId(){
@@ -33,7 +33,8 @@ public class Employe implements IPersonnel {
 	
 	@Override
 	public String toString() {
-		return "Employe [id=" + id + ", nom=" + nom + ", prenom=" + prenom + "]";
+		//return "Employe [id=" + id + ", nom=" + nom + ", prenom=" + prenom + "]";
+		return "Employe : " + prenom + " " + nom;
 	}
 
 	public String getNom(){
@@ -57,10 +58,8 @@ public class Employe implements IPersonnel {
 	}
 
 	@Override
-	public void consulterConges() { // will return Collection
+	public HashSet<String> consulterConges() { // should return Collection
 		System.out.println("Consultation des congés de " + prenom + " " + nom);
-		//return null;
+		return this.demandeConges;
 	}
-	
-	
 }

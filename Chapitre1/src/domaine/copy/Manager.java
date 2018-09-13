@@ -32,9 +32,7 @@ public class Manager extends Employe{
 		System.out.println("Etant manager, il valide ses propres congés");
 	}
 		
-	public void validerConge(){
-		
-	}
+	public void validerConge(){ }
 	
 	@Override
 	public String toString() {
@@ -64,5 +62,4 @@ public class Manager extends Employe{
 	public void setPrenom(String prenom){
 		this.prenom = prenom;
 	}
-
 }
